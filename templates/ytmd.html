@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}YouTube Media Downloader{% endblock title %}
+
+
+{% block body  %}
+
+
+<body class='color ' style="background:#2c3531;">
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <div class="container ">
+            <h1 style="color:#d1e8e2;">YouTube Media Downloader</h1>
+            <p  style="color:#d9b08c;">A desktop application that downloads YouTube media data. 
+              This includes a simple YouTube video, only audio, a cut version of video and audio,
+               A cut version meaning that the user may give a start .and the end time for the video 
+               and only that part will be downloaded instead of complete audio or video. For example, 
+               the user gives start time as 2:30 and end 
+              time as 3:30 the media downloaded will be a one-minute video/audio from 2:30 to 3:30<br><br>
+            Simply Enter YouTube video URL and get downloading</p>
+            
+            <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>-->
+          </div>
+        </div>
+      
+         <!-- <div class="container px-5 mt-5">
+           Example row of columns
+          <div class="row">
+            <div class="col border">
+              <h2>YouTube Comment Classification</h2>
+              <div class="embed-responsive embed-responsive-4by3">
+                <video  autoplay='autoplay' muted='muted' loop='loop'  width='450px' height = '400px'>
+                    <source src='\static\vid\ytcc2.mp4'>
+                </video>
+              </div>
+                
+              
+            </div>  -->
+            
+            <div class="col">
+              <h2 class='alignment px-5' style="color:#d1e8e2;">Try it out</h2>
+              <div class='alignment px-5'> 
+                <p style="color:#d1e8e2;">
+                    Enter Video URL
+                </p>
+                <form method = "post" action = '/ytmd_function'>
+                  {% csrf_token %}
+                <div class="form-floating mt-4">
+                  
+                  <input type="text" class="form-control" id="url" name = "url">
+                  </div>
+                <form>
+                  <div class='row'>
+
+                    {% comment %} first colomn {% endcomment %}
+                    <div class='col'>
+                      <label for="start_time" class="form-label mt-2" style="color:#d1e8e2;">Start time</label>
+                        <div class="form-floating mt-1">
+                        
+                          <input type="text" class="form-control" id="start_time" name = "start_time">
+
+                        </div>      
+                    </div>
+
+                    {% comment %} second colomn {% endcomment %}
+                    <div class='col mt-5'>
+                        <label for="start_time" class="form-label mt-2" style="color:#d9b08c;">MM:SS</label>
+                    </div>
+                    <div class='col'>
+                          <label for="end_time" class="form-label mt-2" style="color:#d1e8e2;">End time</label>
+                        <div class="form-floating mt-1">
+                          
+                          <input type="text" class="form-control" id="end_time" name = "end_time">
+                        </div>
+                    </div>
+                    <div class='col mt-5'>
+                      <label for="start_time" class="form-label mt-2" style="color:#d9b08c;">MM:SS</label>
+                  </div>
+                  </div>
+                
+                    <button style="color:#d1e8e2;background:#116466;" type="submit" class="btn  mt-5" name='complete_aud_download'>Audio Download</button>
+                    <button style="color:#d1e8e2;background:#116466;" type="submit" class="btn  mt-5" name='complete_vid_download'>Video Download</button>
+                    <button style="color:#d9b08c;background:#116466;" type="submit" class="btn  mt-5" name='cut_aud_download'> Cut Audio Download</button>
+                    <button style="color:#d9b08c;background:#116466;" type="submit" class="btn  mt-5" name='cut_vid_download'>Cut Video Download</button></div>
+                </form>
+          </div>
+      
+          <hr>
+      
+        </div> <!-- /container -->
+      
+      </main>
+
+</body>
+
+{% endblock body  %}

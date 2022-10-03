@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block title %}YouTube Comment Classification{% endblock title %}
+
+
+{% block body  %}
+
+
+<body class='color ' style="background:#2c3531;">
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <div class="container">
+            <h1 style="color:#d1e8e2;">YouTube Comment Classification</h1>
+            <p style="color:#d9b08c;">It is a two person project which we made as our Final Year Project. 
+                In this project the user enters a url for youtube video comment 
+                for that video are scrapped and each comment is classified 
+                according to its respective sentiment and overall classified data shown to the user</p>
+            
+            <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>-->
+          </div>
+        </div>
+      
+        <div class="container px-5 mt-5">
+          <!-- Example row of columns -->
+          <div class="row">
+            <div class="col ">
+              <h2 style="color:#d1e8e2;">YouTube Comment Classification</h2>
+              <div class="embed-responsive embed-responsive-4by3">
+                <video  autoplay='autoplay' muted='muted' loop='loop'  width='450px' height = '400px'>
+                    <source src='\static\vid\ytcc2.mp4'>
+                </video>
+              </div>
+                
+              
+            </div>
+
+
+
+
+
+            
+
+
+
+
+
+
+
+            
+            <div class="col   ">
+              <h2 style="color:#d1e8e2;">Demo</h2>
+              <form method = "post" action = '/sentiment_analysis'>
+                {% csrf_token %}
+                
+
+              <div class='alignment text-center px-5'> 
+                <p style="color:#d9b08c;">
+                    Please enter a sentence you want to know the sentiment for: {{ myform }}
+                </p>
+                
+                <div class="form-floating my-4">
+                  <label for="sentence" class="form-label"></label>
+                  <input type="text" class="form-control" id="sentence" name = "sentence">
+                  </div>
+
+                  <p style="color:#d9b08c;"> sentiment for your sentence is:</p>
+                  <div class="form-floating my-4">
+                    <label for="sentiment" class="form-label"></label>
+                    {% if output %} <input class="form-control" id="disabledInput" type="text" placeholder="sentiment" disabled>{% endif %}
+                  </div>
+                <p style="color:#ffcb9a;background:#082525;">{{ result }}<br></p>
+              <button type="submit"style="color:#d1e8e2;background:#116466;" class="btn">Check</button>
+              
+            </div>
+          </form>
+          </div>
+      
+          <hr>
+      
+        </div> <!-- /container -->
+      
+      </main>
+
+</body>
+
+{% endblock body  %}

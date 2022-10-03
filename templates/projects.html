@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% block title %}Projects{% endblock title %}
+
+
+{% block body  %}
+<!--
+<body class='color bg-secondary h-100'>
+
+    <div class="container  mt-5 bg-white">
+        <div class="row">
+          <div class="col bg-dark text-light">
+            <b>YouTube Comment Classification</b>
+            <p class='text bg-light text-dark'>
+                <div> <img src="\static\img\4res.jpeg"  alt="personal image"></div>
+                YouTubers constantly monitor the 
+                feedback of their users with the goal of improving and
+                 providing better content the type that the viewers want to see.
+                 Youtubers may get feedback either from likes/dislikes
+                  or from the comments.
+                 Comments give better variety of feedback as compared 
+                 to likes/dislikes.
+                  Thus, automated approach has been proposed for 
+                  better analyzing viewers comments.
+                   We introduce YTCC (YouTube comment classifier) which 
+                   classifies the viewers comments into 16 different 
+                   categories based on their sentiments.
+                    YTCC relies on BERT trained model to classify 
+                    the comments into different categories to 
+                    make it easy for content creators to have a 
+                    vast and fast review of their video.
+                 Which will help them change their content to become more better
+                 
+                </p>
+                                 
+          </div>
+          <div class="vr bg-dark"></div>
+          <div class="col bg-dark text-light">
+            <b>YouTube Media Downloader</b>
+            <p class='text bg-light text-dark'>
+                <div> <img src="\static\img\5res.jpeg"   alt="personal image"></div>
+                A desktop application that downloads YouTube media data. This
+                includes a simple YouTube video, only audio, a cut version of video
+                and audio, A cut version meaning that the user may give a start and
+                the end time for the video and only that part will be downloaded
+                instead of complete audio or video. For example, the user gives start
+                time as 2:30 and end time as 3:30 the media downloaded will be a
+                one-minute video/audio from 2:30 to 3:30.
+                <br><br><br><br><br><br>
+                 
+            </p>
+            
+          </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+-->
+
+<body class='color ' style="background:#2c3531;">
+    <main role="main">
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-3" style="color:#d1e8e2;">Hello</h1>
+            <p style="color:#d9b08c;">Welcome to my projects. Here you can read the discription about my project and can also test and see some demo for it</p>
+            <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>-->
+          </div>
+        </div>
+      
+        <div class="container px-5 mt-5 ">
+          <!-- Example row of columns -->
+          <div class="row" >
+            <div class="col " style="background:#116466;">
+              <h2 style="color:#d1e8e2;">YouTube Comment Classification</h2>
+              <div class='alignment text-center px-5'> <img src="\static\img\4res.jpeg"  alt="personal image"></div>
+              <p style="color:#d9b08c;">
+                
+                  Thus, automated approach has been proposed for 
+                  better analyzing viewers comments.
+                   We introduce YTCC (YouTube comment classifier) which 
+                   classifies the viewers comments into 16 different 
+                   categories based on their sentiments.
+                    YTCC relies on BERT trained model to classify 
+                    the comments into different categories to 
+                    make it easy for content creators to have a 
+                    vast and fast review of their video.
+                 Which will help them change their content to become more better
+                 
+                </p>
+                
+              <p><a style="background:#d1e8e2; color:#116466" class="btn  " href="/ytcc" role="button">YouTube Comment Classification</a></p>
+            </div>
+            
+
+
+
+            <div class="col ">
+              
+                
+              
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col " style="background:#116466;">
+              <h2 style="color:#d1e8e2;">YouTube Media Downloader</h2>
+              <div class='alignment text-center px-5'> <img src="\static\img\5res.jpeg"  alt="personal image"></div>
+              <p class='text' style="color:#d9b08c;">
+                
+                A desktop application that downloads YouTube media data. This
+                includes a simple YouTube video, only audio, a cut version of video
+                and audio, A cut version meaning that the user may give a start and
+                the end time for the video and only that part will be downloaded
+                instead of complete audio or video. For example, the user gives start
+                time as 2:30 and end time as 3:30 the media downloaded will be a
+                one-minute video/audio from 2:30 to 3:30.</p>
+                
+              <p><a style="background:#d1e8e2; color:#116466" class="btn " href="/ytmd" role="button">YouTube Media Downloader</a></p>
+            </div>
+            
+          </div>
+      
+          <hr>
+      
+        </div> <!-- /container -->
+      
+      </main>
+
+</body>
+
+{% endblock body  %}

@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+ 
+{% block body  %}
+<body style="background:#2c3531;">
+   
+      
+<div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+   
+    <div> <img src="\static\img\my.png" class="rounded mx-auto d-block " alt="personal image"> 
+        
+    </div>
+    <main class="px-3 text-center ">
+        <h1 style="color:#d1e8e2;">Hello</h1>
+        <p class="lead" style="color:#d9b08c;">Welcome to my portfolio</p>
+        <p style="color:#d9b08c;"> My Name is Abul Aala Fareh <br> I am a software developer with most experience in<br> 
+          Python | Django | Tkinter | Sqlite | Data Science
+        
+        <br>
+       
+
+        
+
+  <div class="container ">
+    <div class="row row-cols-2  gx-5 g-lg-3">
+      <div style="background:#116466;" class="col-sm  shadow rounded">
+        <b style="color:#d1e8e2;" class='size '>Education</b>
+        <p style="color:#d9b08c;"class='spaces mt-5 '>
+          
+          Mairi Darasgah (Kot Addu)<br>
+          Matric 2014 – 2016<br><br><br>
+          Punjab Group of Colleges (Kot Addu)<br>
+          Fsc(pre-engineering) 2016 – 2018<br><br><br>
+          Comsats University Islamabad Abbottabad Campus<br>
+          Bachelors in Computer Science (BCS) 2018 – 2022<br>
+          CGPA : 3.01
+
+          
+           
+      </p>
+      </div>
+      <div  class="col-sm   rounded">
+        <b style="color:#d1e8e2;"class='size '>Skills</b>
+        <p style="color:#d9b08c;"class='spaces mt-5 '>
+          
+          Python<br> Java<br>Data Science<br> C/C++ <br>Machine Learning<br> Sqlite<br>
+            Django<br> Beautiful soup<br>Tkinter
+          
+           
+      </p>
+      </div>
+      <div style="background:#116466;"class="col-sm  shadow rounded ">
+        <b style="color:#d1e8e2;"class='size '>Projects</b>
+        <p style="color:#d9b08c;"class='spaces mt-5 '>
+          
+          <b style="color:#ffcb9a;">YouTube Comment Classification (FYP)</b><br>
+          A desktop application that scrapes YouTube comments and classify
+          them according to their sentiment using a Machine Learning trained
+          model. Total sentiments are sixteen. This Project is largely based upon
+          the fields of data science and machine learning.<br>
+          <b style="color:#ffcb9a;">YouTube Media Downloader</b><br>
+          A desktop application that downloads YouTube media data. This
+          includes a simple YouTube video, only audio, a cut version of video
+          and audio, A cut version meaning that the user may give a start and
+          the end time for the video and only that part will be downloaded
+          instead of complete audio or video. For example, the user gives start
+          time as 2:30 and end time as 3:30 the media downloaded will be a
+          one-minute video/audio from 2:30 to 3:30.<br>
+          
+           
+      </p>
+      </div>
+    </div>
+    <p class="lead mt-5">
+      <a style="background:#d1e8e2; color:#116466" href="/projects" class="btn btn-lg border-white ">Projects</a>
+    </p>
+  </main>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div style="background:#d1e8e2;" class='color border mt-5'>
+
+    
+   
+    
+        
+    
+    <main class="px-3">
+        <h1  style="Color:#116466;" class='alignment  text-center '>Contact Me</h1>
+         <br>
+         
+    <form method = "post" action = '/contact'>
+          {% csrf_token %}
+          
+
+        <div class='px-5'> 
+          
+          <div class="input-group">
+            <input id="name" type="text" class="form-control" name="name" placeholder="Name">
+          </div> 
+          <br>
+          <div class="input-group">
+            <input id="email" type="email" class="form-control" name="email" placeholder="Email">
+          </div>
+          <br>
+          <div class="form-group">
+            <textarea id="message" type="text" class="form-control" name="message" placeholder="Message" rows="5"></textarea>
+          </div>
+          <br>
+          
+        <p class="text-center"><button type="submit"style="color:#d1e8e2;background:#116466;" class="btn">Send</button>
+        </p>
+        </div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br>
+        <b><p style="color:#2c3531;">Gmail__</b><a href="#">abul.aala.fareh@gmail.com</a></p>
+        <b><p style="color:#2c3531;" >Linkdln_</b> <a href="#">https://www.linkedin.com/in/abul-aala-fareh-2b0756238/</a></p>
+        <br><br>
+        
+        <!-- <p class="lead text-center">
+          <a  style="background:#2c3531; color:#d1e8e2;" href="/projects" class="btn btn-lg border-white ">Projects</a>
+        </p> -->
+      </main>
+    </div>
+  </div>
+  
+</body>
+
+{% endblock body  %}
